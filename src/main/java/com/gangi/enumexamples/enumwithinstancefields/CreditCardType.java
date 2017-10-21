@@ -10,12 +10,12 @@ import java.util.Map;
  * @author pgangi
  *
  */
-public enum CreditCardType implements Serializable {
+public enum CreditCardType implements Serializable, Runnable {
 /*
  * Name must be in Singular
- * Enums cannot extend other callses or interfaces
+ * Enums cannot extend other classes or interfaces
  * 
- * Enums can implement interfaces
+ * Enums can implement interfaces.
  * 
  */
     VISA (4, 3) {
@@ -74,6 +74,12 @@ public enum CreditCardType implements Serializable {
     }
     
     public abstract String getCardTypeName();
+ 
+    /** {@inheritDoc} */
+    @Override
+    public void run() {
+        System.out.println("Enum in Java implement interfaces");
+     }
     
     public int getPrefix() {
         return prefix;
