@@ -1,0 +1,5 @@
+logging:
+  file: ./application.log
+  level:
+    org.springframework: WARN
+    com.gangi: DEBUG
