@@ -1,6 +1,7 @@
 package com.gangi.enumexamples.basicenum;
 
 /**
+ * Enum to hold the supported credit Card types. 
  * 
  * @author pgangi
  *
